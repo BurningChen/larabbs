@@ -25,6 +25,7 @@
             <!-- Right Side Of Navbar -->
             <ul class="nav navbar-nav navbar-right">
                 <!-- Authentication Links -->
+               
                 @guest
                     <li><a href="{{Route('login')}}">登录</a></li>
                     <li><a href="{{Route('register')}}">注册</a></li>
@@ -38,6 +39,11 @@
                         </a>
 
                         <ul class="dropdown-menu" role="menu">
+                            <li>
+                                <a href="{{route('users.edit',Auth::id())}}">
+                                    编辑资料
+                                </a>
+                            </li>
                             <li>
                                 <a href="{{ route('logout') }}"
                                     onclick="event.preventDefault();
